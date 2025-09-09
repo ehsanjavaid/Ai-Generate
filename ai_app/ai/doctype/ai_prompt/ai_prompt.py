@@ -9,7 +9,6 @@ class AiPrompt(Document):
 
 @frappe.whitelist()
 def generate_ai_text(prompt, docname):
-    """Generate AI response using Gemini API"""
     gemini_key = frappe.local.conf.get("gemini_api_key")
     if not gemini_key:
         frappe.throw("Gemini API key not found in site_config.json or common_site_config.json")
@@ -19,7 +18,6 @@ def generate_ai_text(prompt, docname):
     try:
         model = genai.GenerativeModel("gemini-1.5-flash")
 
-        # Generate response
         response = model.generate_content(prompt)
 
         if not response or not response.text:
@@ -31,7 +29,6 @@ def generate_ai_text(prompt, docname):
         frappe.log_error(frappe.get_traceback(), "Gemini API Error")
         frappe.throw(f"Gemini API failed: {str(e)}")
 
-    # Save response to your Doctype
     try:
         doc = frappe.get_doc("Ai Prompt", docname)
         doc.db_set("response_text", answer)

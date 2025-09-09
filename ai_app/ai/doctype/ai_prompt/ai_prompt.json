@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "format:{query}-{####}",
- "creation": "2025-09-06 12:14:07.828375",
+ "creation": "2025-09-08 20:01:28.975213",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -18,7 +18,9 @@
   {
    "fieldname": "response_text",
    "fieldtype": "Text",
-   "label": "Response Text"
+   "in_list_view": 1,
+   "label": "Response Text",
+   "read_only": 1
   },
   {
    "fieldname": "generate",
@@ -29,7 +31,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-08 13:53:13.926738",
+ "modified": "2025-09-09 15:06:53.609032",
  "modified_by": "Administrator",
  "module": "Ai",
  "name": "Ai Prompt",
