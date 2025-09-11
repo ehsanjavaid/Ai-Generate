@@ -8,6 +8,7 @@
  "field_order": [
   "section_break_clod",
   "response_text",
+  "section_break_fqno",
   "generate"
  ],
  "fields": [
@@ -17,7 +18,7 @@
   },
   {
    "fieldname": "response_text",
-   "fieldtype": "Text",
+   "fieldtype": "Text Editor",
    "in_list_view": 1,
    "label": "Response Text",
    "read_only": 1
@@ -26,12 +27,16 @@
    "fieldname": "generate",
    "fieldtype": "Button",
    "label": "Generate"
+  },
+  {
+   "fieldname": "section_break_fqno",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-09 15:06:53.609032",
+ "modified": "2025-09-11 13:13:12.143150",
  "modified_by": "Administrator",
  "module": "Ai",
  "name": "Ai Prompt",
